@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="fr">
- 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
- 
+
 <body>
- 
+
     <?php
     $menu = [
         "entree" => [
@@ -24,7 +24,7 @@
                 "nomDesPlats" => "frites",
                 "prix" => 20
             ],
- 
+
         ],
         "plats" => [
             "plat1" => [
@@ -40,7 +40,7 @@
                 "prix" => 10
             ]
         ],
- 
+
         "desserts" => [
             "desserts1" => [
                 "nomDesPlats" => "tarte aux fraises",
@@ -67,30 +67,27 @@
             foreach ($plat as $k2 => $v2) {
                 if ($k2 == 'prix') {
                     echo "<li>$k2 : €$v2</li>";
- 
-                    $total+=$v2;
+
+                    $total += $v2;
                 } else {
                     echo "<li>$k2 : $v2</li>";
                 }
- 
             }
         }
-        if ($total >= 20){
-            $reduc = $total*.10;
-            $pay = $total-$reduc;
-            echo "votre reduction - $reduc"."<br>";
+        if ($total >= 20) {
+            $reduc = $total * .10;
+            $pay = $total - $reduc;
+            echo "votre reduction - $reduc" . "<br>";
             echo "votre devez payer $pay";
-           
+            $total = 0;
         }
-       
     }
- 
- 
- 
- 
+
+
+
+
     ?>
- 
+
 </body>
- 
+
 </html>
- 
